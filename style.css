@@ -1,0 +1,216 @@
+/* root files */
+:root {
+    --clr-background-blue: hsla(225, 100%, 94%, 0.466);
+    --clr-button-blue: hsl(245, 75%, 52%);
+    --clr-light-button-blue: hsla(245, 75%, 52%, 0.692);
+
+
+    --clr-Very-pale-blue: hsl(225, 100%, 98%);
+    --clr-text-blue: hsl(224, 23%, 55%);
+    --clr-light-text-blue: hsla(224, 23%, 55%, 0.651);
+    --clr-title-blue: hsl(223, 47%, 23%);
+
+    --fw-small:500;
+    --fw-medium:700;
+    --fw-big:900;
+}
+
+/* Page font */
+@font-face {
+    font-family: Hat;
+    src: url(RedHatDisplay-VariableFont_wght.ttf);
+}
+
+/* CSS Reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+/* ====================================================== */
+
+/* main */
+body {
+    position: relative;
+    background-image: url(pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+
+    font-size: 16px;
+    font-family: Hat;
+    font-weight: var(--fw-small);
+    color: var(--clr-text-blue);
+    padding: 0rem 1rem;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem 0rem;
+}
+
+/* =================================================== */
+
+/* main section container */
+.section_containers {
+    border-radius: 1rem;
+    
+    width: 80%;
+    max-width: 400px;
+    min-width: 400px;
+    margin: 0 auto;
+
+    overflow: hidden;
+    box-shadow: 0px 3px 5px var(--clr-light-button-blue);
+}
+
+/* ======================================================= */
+
+/* image section */
+.image_section {
+    margin-bottom: 0;
+    z-index: 1;
+}
+
+image {
+    min-width: 100%;
+    display: inline-block;
+}
+
+/* ===================================================== */
+
+/* main sub section container */
+.sub_section_container {
+    background: #fff;
+    margin-top: -1rem;
+
+    display: grid;
+    gap: 1.2rem;
+    padding: 0rem 2rem;
+}
+
+/* ===================================================== */
+
+/* order section */
+.order_section {
+    line-height: 1.5rem;
+}
+
+.order_section .title {
+    font-size: 1.5rem;
+    font-weight: var(--fw-big);
+    
+    color: var(--clr-title-blue);
+
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.order_section .about {
+    font-size: 1rem;
+    word-spacing: 1.5px;
+    
+    padding: 0rem 2rem;
+}
+
+/* flex section */
+.flex_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+    background: var(--clr-background-blue);
+    padding: 2rem 0;
+    
+    border-radius: 1rem;
+}
+
+.flex_section .length_price {
+    position: relative;
+    right: 2rem;
+}
+
+.flex_section .annual {
+    color: var(--clr-title-blue);
+    font-weight: var(--fw-medium);
+}
+
+.flex_section .link {
+    color: var(--clr-button-blue);
+    font-weight: var(--fw-medium);
+}
+
+.flex_section .link:hover {
+    color: var(--clr-light-button-blue);
+    text-decoration: none;
+}
+
+/* finale section */
+.final_section {
+    display: grid;
+    gap: 2rem;
+    padding: 1rem 0rem;
+    transition: all ease-in-out 250ms;
+}
+
+.final_section .btn {
+    background: var(--clr-button-blue);
+    color: #fff;
+    text-decoration: none;
+
+    font-weight: var(--fw-medium);
+
+    padding: 1rem;
+    border-radius: 1rem;
+
+    box-shadow: 0rem .5rem 1.5rem var(--clr-light-button-blue);
+}
+
+.final_section .btn:hover {
+    background: var(--clr-light-button-blue);
+    transform: scale(1.02);
+}
+
+.final_section .cancel_btn{
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: var(--fw-medium);
+    color: var(--clr-light-text-blue);
+
+    padding: 0 0 2rem 0;
+}
+
+.final_section .cancel_btn:hover {
+    color: var(--clr-title-blue);
+    font-weight: var(-s-fw-medium);
+    transform: scale(1.05);
+}
+
+@media (min-width: 650px) {
+    body {
+        background-image: url(pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .section_containers {
+        max-width: 430px;
+        min-width: 430px;
+    }
+
+    .flex_section {
+        gap: 4rem;
+    }
+
+    .order_section .about {
+        padding: 0rem 3rem;
+    }
+    
+}
