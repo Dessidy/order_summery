@@ -38,7 +38,7 @@ body {
     position: relative;
     background-image: url(pattern-background-mobile.svg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 
     height: 100vh;
 
@@ -50,7 +50,7 @@ body {
 
 .container {
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 }
 
 /* =================================================== */
@@ -195,7 +195,7 @@ image {
     body {
         background-image: url(pattern-background-desktop.svg);
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         height: 100vh;
     }
 }
